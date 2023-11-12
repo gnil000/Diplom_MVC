@@ -5,7 +5,7 @@
 
 @if (User.Identity.IsAuthenticated)
 {
-    <p>@User.Identity.Name</p>
+    <p>Вы авторизованы под почтой: @User.Identity.Name</p>
 
     <form method="post" asp-controller="Account" asp-action="Logout">
         <input type="submit" value="Выход" />
@@ -18,6 +18,6 @@ else
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Консультирующая система</h1>
+    <p>Здесь вы можете задавать вопросы, читать ранее заданные вопросы другими пользователями и отвечать на чужие</a>.</p>
 </div>

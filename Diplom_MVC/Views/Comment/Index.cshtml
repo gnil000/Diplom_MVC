@@ -1,0 +1,32 @@
+﻿@model List<Comment>
+
+<h2>Вопросы</h2>
+
+@* <div>
+	<a asp-controller="Theme" asp-action="Create">Создать</a>
+</div> *@
+
+<table class="table">
+	@foreach (var comment in Model)
+	{
+		<tr class="head-comment" style="background-color: #f5f5f5">
+			<th colspan="2">@comment.Title</th>
+		</tr>
+		<tr>
+			<td colspan="2">@comment.Description</td>
+		</tr>
+		<tr>
+@* 			@if (imagePath != "")
+			{
+				<img src="@imagePath" alt="Sample Image" width="300px" />
+			} *@
+			<td><img src="https://www.pravilamag.ru/upload/img_cache/114/1141e3214a1146cfa23e94fb3049e271_ce_640x399x0x255_cropped_666x444.jpeg"></td>
+		</tr>
+		<tr style="background-color:#fff4f4">
+			<td>Дата публикации: @comment.CreatedDate</td>
+			<td>
+				@Html.ActionLink("Ответить", "", "", comment, null)
+			</td>
+		</tr>
+	}
+</table>

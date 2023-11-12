@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Diplom_MVC.Models.ViewModels
+namespace Diplom_MVC.Models.ViewModels.Users
 {
     public class RegisterViewModel
     {

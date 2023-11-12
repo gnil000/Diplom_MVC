@@ -1,0 +1,23 @@
+﻿@model List<Theme>
+
+<h2>Темы</h2>
+
+@* <div>
+	<a asp-controller="Theme" asp-action="Create">Создать</a>
+</div> *@
+
+<table class="table">
+	@foreach(var them in Model)
+	{
+		<tr>
+			<td>@them.Titile</td>
+			<td>@them.Description</td>
+			<td>
+				@Html.ActionLink("Перейти к вопросам", "Index", "Comment", them, null)
+			</td>
+			<td>
+				@Html.ActionLink("Задать вопрос", "Create", "Comment", them, null)
+			</td>
+		</tr>
+	}
+</table>

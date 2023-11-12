@@ -1,7 +1,8 @@
-﻿using Diplom_MVC.Models.ViewModels;
-using Diplom_MVC.Models;
+﻿using Diplom_MVC.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Diplom_MVC.Models.ViewModels.Users;
+using Diplom_MVC.Models.ViewModels;
 
 namespace Diplom_MVC.Controllers
 {

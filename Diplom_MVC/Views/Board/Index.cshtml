@@ -1,0 +1,23 @@
+﻿@model List<Board>
+<h2>Разделы</h2>
+
+<div>
+	<a asp-controller="Board" asp-action="Create">Создать</a>
+</div>
+<table class="table">
+	@foreach(var board in Model)
+	{
+		<tr>
+			<td>@board.Title</td>
+			<td>@board.Description</td>
+			<td>
+				@Html.ActionLink("К темам", "Index", "Theme", board, null)
+			</td>
+			<td>
+				@Html.ActionLink("Создать тему", "Create", "Theme", board, null)
+			</td>
+		</tr>
+	}
+</table>
+
+

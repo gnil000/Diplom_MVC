@@ -1,5 +1,7 @@
 using Diplom_MVC.Models;
 using Diplom_MVC.Models.Contexts;
+using Diplom_MVC.Models.Interfaces;
+using Diplom_MVC.Models.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,6 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddTransient<IBoardRepository, BoardRepository>();
+builder.Services.AddTransient<IThemeRepository, ThemeRepository>();
+builder.Services.AddTransient<ICommentRepository, CommentRepository>();
 
 builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 

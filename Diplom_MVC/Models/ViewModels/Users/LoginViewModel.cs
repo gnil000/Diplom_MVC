@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Diplom_MVC.Models.ViewModels
+namespace Diplom_MVC.Models.ViewModels.Users
 {
     public class LoginViewModel
     {
@@ -16,6 +16,6 @@ namespace Diplom_MVC.Models.ViewModels
         [Display(Name = "Запомнить?")]
         public bool RememberMe { get; set; }
 
-        public string ReturnUrl { get; set; }
+        public string ReturnUrl { get; set; } = "https://localhost:7070/Users";
     }
 }

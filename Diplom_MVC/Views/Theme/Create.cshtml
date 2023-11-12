@@ -1,0 +1,20 @@
+﻿@model Diplom_MVC.Models.ViewModels.Themes.CreateThemeViewModel
+
+<h2>Создание новой темы @ViewData["BoardTitle"]</h2>
+<form method="post" asp-controller="Theme" asp-action="Create">
+	<div asp-validation-summary="ModelOnly"></div>
+	<div>
+		<label asp-for="Title"></label><br />
+		<input asp-for="Title" />
+	</div>
+	<div>
+		<label asp-for="Description"></label><br />
+		<textarea asp-for="Description" cols="100" rows="10"></textarea>
+	</div>
+	<div>
+		<input asp-for="BoardId" value=@ViewData["BoardId"] />
+	</div>
+	<div>
+		<input type="submit" value="Создать" />
+	</div>
+</form>
